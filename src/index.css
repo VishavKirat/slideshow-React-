@@ -25,57 +25,58 @@ img{
   width:100%;
   height: auto;
 }
-.slider{
+.Slider{
 
   background: lightslategray;
   position: relative;
   width: 100%;
   margin: 0 auto;
   height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   overflow: hidden;
-  white-space: nowrap;
 }
 
-.backArrow,.nextArrow{
-  width: 15%;
+.leftArrow,.rightArrow{
+  width: 10%;
   position: absolute;
   height: 100vh;
   top:0;
   z-index: 2;
-  font-size: 8rem;
+  font-size: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   color:white;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
-.nextArrow{
+.rightArrow{
   right:0
 }
-  .slider-wrapper {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    /* display: flex;
-    flex-direction: row; */
+.slide-wrapper{
+  width:100vw;
+  height:auto;
+  white-space: nowrap;
+}
+.slide{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+
+   animation: animation 1s ease-in;
+  animation-fill-mode: backwards; 
+  
+}
+
+@keyframes animation {
+  0%{
+    opacity: .3;
   }
-    .slide {
-      display: inline-block;
-      height: 100%;
-      width: 100%;
-    }
-    .right-arrow, .left-arrow {
-      height: 50px;
-      width: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f9f9f9;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: transform ease-in .1s;
-    }  .right-arrow:hover, .left-arrow:hover{
-      transition: transform ease-in .1s;
-      transform: scale(1.1)
-    }  
+  100%{
+    opacity: 1;
+  }
+}

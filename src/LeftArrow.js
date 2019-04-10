@@ -1,13 +1,10 @@
 import React from 'react'
 
-
 const LeftArrow = (props) =>{
-    const {goToPrevSlide}=props
+    const {handleLeftClick} = props
     return (
-        <div className="backArrow" onClick={goToPrevSlide}>
-            <div aria-hidden = 'true'>⬅︎</div>
-        </div>
+        <div className="leftArrow" onClick ={handleLeftClick}>⟽</div>
     )
 }
 
-export default LeftArrow;
+export default LeftArrow

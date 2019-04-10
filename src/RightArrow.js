@@ -1,13 +1,10 @@
 import React from 'react'
 
-
 const RightArrow = (props) =>{
-    const {goToNextSlide}= props
+    const {handleRightClick} = props
     return (
-       <div className="nextArrow" onClick = {goToNextSlide}>
-            <div aria-hidden = 'true'>➡︎</div>
-        </div>
+        <div className="rightArrow" onClick= {handleRightClick}>⟾</div>
     )
 }
 
-export default RightArrow;
+export default RightArrow

@@ -1,19 +1,17 @@
 import React from 'react'
 
-
-const Slide = (props) =>{
-    const {image} = props;
-    const styles = {
-        backgroundImage : `url(${image})`,
+const Slide = (props)=>{
+    const {image} = props
+    const style = {
+        background : `url(${image})`,
         backgroundSize : 'cover',
         backgroundRepeat : 'no-repeat',
-        backgroundPoistion : 'center'
+        backgroundPosition : 'center'
     }
-    return (
-        <div className="slide" style = {styles}>
-       
-        </div>
-    )
-}
 
-export default Slide;
+ return (
+     <div className={"slide active"} style= {style}>
+     </div>
+ )
+}
+export default Slide
